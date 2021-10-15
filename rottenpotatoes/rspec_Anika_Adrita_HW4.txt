@@ -1,0 +1,6 @@
+..........
+
+Finished in 0.27724 seconds (files took 1.62 seconds to load)
+10 examples, 0 failures
+
+Coverage report generated for Cucumber Features, RSpec to /home/ec2-user/environment/Homework4/rottenpotatoes/coverage. 48 / 53 LOC (90.57%) covered.

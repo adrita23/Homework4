@@ -1,0 +1,39 @@
+<h2>Similar movies to <em><%= @movie.title %></em> by <em><%= @movie.director %></em></h2>
+
+<table class="table table-striped col-md-12" id="movies">
+  <thead>
+    <tr>
+      <th>Movie Title</th>
+      <th>Rating</th>
+      <th>Release Date</th>
+      <th>Director</th>
+      <th>More Info</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @movies.each do |movie| %>
+      <tr>
+        <td>
+          <%= movie.title %>
+        </td>
+        <td>
+          <%= movie.rating %>
+        </td>
+        <td>
+          <%= movie.release_date %>
+        </td>
+        <td>
+          <%= movie.director %>
+        </td>
+        <td>
+          <%= link_to "More about #{movie.title}", movie_path(movie) %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<div class="row">
+  <%= link_to 'Back main page', movies_path, :class => 'btn btn-primary col-2 spacer' %>
+  <%= link_to "Back to #{@movie.title} overview", movie_path(@movie), :class => 'btn btn-primary spacer' %>
+</div>
